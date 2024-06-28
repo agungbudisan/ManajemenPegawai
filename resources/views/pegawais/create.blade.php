@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    @vite('resources/css/app.css', 'resources/js/app.js')
     <title>Tambah Pegawai Baru</title>
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
@@ -34,7 +33,5 @@
 
         <a href="{{ url('/') }}" class="mt-4 inline-block text-blue-500 hover:underline">Kembali ke Daftar</a>
     </div>
-
-    <script src="./node_modules/preline/dist/preline.js"></script>
 </body>
 </html>
