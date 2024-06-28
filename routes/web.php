@@ -9,11 +9,9 @@ Route::get('/', function () {
 });
 
 Route::get('/login', [UserController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [UserController::class, 'login']);
+Route::post('/login', [UserController::class, 'authenticate']);
 Route::get('/register', [UserController::class, 'showRegisterForm'])->name('register');
 Route::post('/register', [UserController::class, 'register']);
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
-Route::middleware(['User'])->group(function () {
-    Route::resource('pegawais', PegawaiController::class);
-});
+Route::middleware('auth')->resource('pegawais', PegawaiController::class);
